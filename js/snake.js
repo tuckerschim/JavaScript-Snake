@@ -145,7 +145,7 @@ SNAKE.Snake = SNAKE.Snake || (function() {
         me.snakeBody["b0"].next = me.snakeBody["b0"];
         me.snakeBody["b0"].prev = me.snakeBody["b0"];
         
-        me.snakeLength = 1;
+        me.snakeLength = 30;
         me.snakeHead = me.snakeBody["b0"];
         me.snakeTail = me.snakeBody["b0"];
         me.snakeHead.elm.className = me.snakeHead.elm.className.replace(/\bsnake-snakebody-dead\b/,'');
@@ -326,7 +326,6 @@ SNAKE.Snake = SNAKE.Snake || (function() {
         * This method handles what happens when the snake dies.
         * @method handleDeath
         */
-        me.handleDeath = function() {
             function recordScore () {
                 var highScore = localStorage.jsSnakeHighScore;
                 if (highScore == undefined) localStorage.setItem('jsSnakeHighScore', me.snakeLength);
