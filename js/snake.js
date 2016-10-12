@@ -121,7 +121,7 @@ SNAKE.Snake = SNAKE.Snake || (function() {
             rowShift = [-1, 0, 1, 0],
             xPosShift = [],
             yPosShift = [],
-            snakeSpeed = 75,
+            snakeSpeed = 150,
             isDead = false,
             isPaused = false;
         function getMode (mode, speed) {
@@ -145,7 +145,7 @@ SNAKE.Snake = SNAKE.Snake || (function() {
         me.snakeBody["b0"].next = me.snakeBody["b0"];
         me.snakeBody["b0"].prev = me.snakeBody["b0"];
         
-        me.snakeLength = 1;
+        me.snakeLength = 100;
         me.snakeHead = me.snakeBody["b0"];
         me.snakeTail = me.snakeBody["b0"];
         me.snakeHead.elm.className = me.snakeHead.elm.className.replace(/\bsnake-snakebody-dead\b/,'');
